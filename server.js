@@ -6,7 +6,7 @@ const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
-const DATABASE_URL = process.env.DATABASE_URL;
+
 const db = knex({
   client: 'pg',
   connection: {
@@ -43,9 +43,9 @@ app.post('/imageurl', (req, res) => {
   image.handleApiCall(req, res);
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   //在監聽發生後執行第二個函式
-  console.log(`app is running on port 3000`);
+  console.log(`app is running on port ${process.env.PORT || 3000}`);
 });
 
 /*
