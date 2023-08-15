@@ -25,6 +25,7 @@ app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('success');
+  res.send(process.env.POSTGRESQL_HOST);
 });
 
 app.post('/signin', signin.handleSignin(db, bcrypt));
