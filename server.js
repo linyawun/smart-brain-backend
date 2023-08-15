@@ -15,7 +15,6 @@ const db = knex({
     user: 'root',
     password: process.env.DB_PASSWORD,
     database: 'smart-brain-database',
-    ssl: true,
   },
 });
 
