@@ -11,8 +11,8 @@ const db = knex({
   client: 'pg',
   connection: {
     host: process.env.POSTGRESQL_HOST,
-    port: process.env.POSTGRESQL_PORT,
-    user: process.env.POSTGRESQL_USERNAME,
+    port: 30866,
+    user: 'root',
     password: process.env.POSTGRESQL_PASSWORD,
     database: 'smart-brain-database',
   },
