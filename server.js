@@ -24,8 +24,7 @@ app.use(express.json()); //轉譯json內容
 app.use(cors());
 
 app.get('/', (req, res) => {
-  //res.send('success');
-  res.send(process.env.POSTGRESQL_HOST);
+  res.send('success');
 });
 
 app.post('/signin', signin.handleSignin(db, bcrypt));
