@@ -13,7 +13,7 @@ const db = knex({
     host: 'zeabur-gcp-asia-east1-1.clusters.zeabur.com',
     port: 30866,
     user: 'root',
-    password: process.env.POSTGRESQL_PASSWORD,
+    password: process.env.DB_PASSWORD,
     database: 'smart-brain-database',
     ssl: true,
   },
@@ -25,7 +25,7 @@ app.use(express.json()); //轉譯json內容
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send(`success ${process.env.DB_PASSWORD}`);
+  res.send('success');
 });
 
 app.post('/signin', signin.handleSignin(db, bcrypt));
