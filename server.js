@@ -10,7 +10,7 @@ const image = require('./controllers/image');
 const db = knex({
   client: 'pg',
   connection: {
-    host: process.env.POSTGRESQL_HOST,
+    host: 'zeabur-gcp-asia-east1-1.clusters.zeabur.com',
     port: 30866,
     user: 'root',
     password: process.env.POSTGRESQL_PASSWORD,
@@ -25,7 +25,7 @@ app.use(express.json()); //轉譯json內容
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send(`success ${process.env.POSTGRESQL_HOST}`);
+  res.send(`success ${process.env.DB_PASSWORD}`);
 });
 
 app.post('/signin', signin.handleSignin(db, bcrypt));
