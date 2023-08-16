@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 const returnClarifaiJSONRequest = (imageUrl) => {
   const PAT = '8cc2ac1182674cf28fd14679da2180f2';
   const USER_ID = 'monica_lin';
