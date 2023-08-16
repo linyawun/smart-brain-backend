@@ -1,4 +1,5 @@
-const fetch = require('node-fetch/lib/index');
+const fetch = (...args) =>
+  import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
 const returnClarifaiJSONRequest = (imageUrl) => {
   const PAT = '8cc2ac1182674cf28fd14679da2180f2';
