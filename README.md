@@ -1,6 +1,7 @@
 # smart-brain-backend
 > 此為 [smart-brain](https://github.com/linyawun/smart-brain)的後端，提供前端 API ，並連接 PostgreSQL 資料庫。
-> 此後端與資料庫皆運行在 [Zeabur](https://zeabur.com/zh-TW)
+
+> 此後端與資料庫皆運行在 [Zeabur](https://zeabur.com/zh-TW)。
 
 ## 功能 
 - [x] 註冊 
