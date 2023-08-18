@@ -2,7 +2,7 @@ const fetch = (...args) =>
   import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
 const returnClarifaiJSONRequest = (imageUrl) => {
-  const PAT = '8cc2ac1182674cf28fd14679da2180f2';
+  const PAT = process.env.API_CLARIFAI;
   const USER_ID = 'monica_lin';
   const APP_ID = 'test';
   const IMAGE_URL = imageUrl;
